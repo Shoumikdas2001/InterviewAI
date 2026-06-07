@@ -1,0 +1,30 @@
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET Core / Backend
+backend/**/bin/
+backend/**/obj/
+*.dll
+*.pdb
+*.suo
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.env
+frontend/.env.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
