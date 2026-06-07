@@ -11,6 +11,10 @@ backend/**/obj/
 *.pdb
 *.suo
 
+# Secrets — never commit these
+backend/**/appsettings.Development.json
+backend/**/appsettings.Production.json
+
 # Node / Frontend
 frontend/node_modules/
 frontend/dist/
