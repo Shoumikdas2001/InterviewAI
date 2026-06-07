@@ -153,7 +153,7 @@ export function DashboardPage() {
           color: score >= 7 ? '#10B981' : score >= 5 ? '#F59E0B' : '#EF4444',
           fontWeight: 700, fontSize: 16,
         }}>
-          {score.toFixed(1)}/10
+          {score?.toFixed(1)}/10
         </Text>
       ) : <Text style={{ color: 'rgba(255,255,255,0.3)' }}>—</Text>,
     },

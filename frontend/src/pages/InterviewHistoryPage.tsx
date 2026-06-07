@@ -76,7 +76,7 @@ export function InterviewHistoryPage() {
         const color = score >= 7 ? '#10B981' : score >= 5 ? '#F59E0B' : '#EF4444';
         return (
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <Text style={{ color, fontWeight: 700 }}>{score.toFixed(1)}/10</Text>
+            <Text style={{ color, fontWeight: 700 }}>{score?.toFixed(1)}/10</Text>
             <Progress
               percent={score * 10}
               strokeColor={color}

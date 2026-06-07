@@ -32,7 +32,11 @@ try
     builder.Services.AddJwtAuthentication(builder.Configuration);
     builder.Services.AddCorsPolicy(builder.Configuration);
     builder.Services.AddSwagger();
-    builder.Services.AddControllers();
+    builder.Services.AddControllers()
+        .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+        });
     builder.Services.AddEndpointsApiExplorer();
 
     // Rate limiting
@@ -75,8 +79,8 @@ try
         });
     }
 
-    app.UseHttpsRedirection();
     app.UseCors("InterviewAIPolicy");
+    app.UseHttpsRedirection();
     app.UseRateLimiter();
     app.UseAuthentication();
     app.UseAuthorization();

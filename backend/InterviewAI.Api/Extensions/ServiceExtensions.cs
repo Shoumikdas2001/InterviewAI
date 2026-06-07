@@ -50,7 +50,7 @@ public static class ServiceExtensions
 
     public static IServiceCollection AddAIProvider(this IServiceCollection services)
     {
-        services.AddHttpClient<IAIProvider, GeminiProvider>(client =>
+        services.AddHttpClient<IAIProvider, GroqProvider>(client =>
         {
             client.Timeout = TimeSpan.FromSeconds(60);
         });
